@@ -6,27 +6,57 @@
         <div class="areas">
           <label class="input-nota">
             Linguagens e Códigos:
-            <input v-model="lc" type="number" required placeholder="999,9" />
+            <input
+              v-model="lc"
+              type="number"
+              step="0.01"
+              required
+              placeholder="999,9"
+            />
           </label>
 
           <label class="input-nota">
             Ciências Humanas:
-            <input v-model="ch" type="number" required placeholder="999,9" />
+            <input
+              v-model="ch"
+              type="number"
+              step="0.01"
+              required
+              placeholder="999,9"
+            />
           </label>
 
           <label class="input-nota">
             Ciências da Natureza:
-            <input v-model="cn" type="number" required placeholder="999,9" />
+            <input
+              v-model="cn"
+              type="number"
+              step="0.01"
+              required
+              placeholder="999,9"
+            />
           </label>
 
           <label class="input-nota">
             Matemática:
-            <input v-model="mt" type="number" required placeholder="999,9" />
+            <input
+              v-model="mt"
+              type="number"
+              step="0.01"
+              required
+              placeholder="999,9"
+            />
           </label>
 
           <label class="input-nota">
             Redação:
-            <input v-model="red" type="number" required placeholder="999,9" />
+            <input
+              v-model="red"
+              type="number"
+              step="0.01"
+              required
+              placeholder="999,9"
+            />
           </label>
         </div>
 
@@ -69,6 +99,7 @@
           <label class="peso">
             Peso:
             <input
+              name="pesomt"
               v-model="pesomt"
               type="number"
               pattern="[0-9]"
@@ -92,7 +123,10 @@
         </div>
       </div>
 
-      <button type="submit">Calcular</button>
+      <div class="options">
+        <button type="submit">Calcular</button>
+        <button type="reset">Reset</button>
+      </div>
     </form>
 
     <p v-if="media">Sua média : {{ this.media }}</p>
@@ -211,6 +245,12 @@ input {
   border-radius: 5px;
   padding: 8px 0;
   text-align: center;
+}
+
+.options {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
 }
 
 button {
